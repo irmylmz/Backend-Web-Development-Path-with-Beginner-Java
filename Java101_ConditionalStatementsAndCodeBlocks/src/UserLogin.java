@@ -2,8 +2,9 @@ import java.util.*;
 
 public class UserLogin {
 
-	public static void main(String[] args) {
-		String userName, password;
+	String userName, password;
+		int req;
+		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("Kullanıcı adınızı giriniz: ");
@@ -15,9 +16,20 @@ public class UserLogin {
 			System.out.println("Giriş yapıldı.");
 		}else {
 			System.out.println("Yanlış bilgi girdiniz.");
+			System.out.println("Şifrenizi sıfırlamak ister misiniz?\nEvet ise 1'e basın.");
+			req = sc.nextInt();
+			if(req == 1) {
+				sc.nextLine();
+				password = sc.nextLine();
+				if (password.equals(password)) {
+					System.out.println("Şifre oluşturulamadı, lütfen başka şifre giriniz.");
+				}else {
+					System.out.println("Şifre oluşturuldu.");
+				}
+			}else {
+				System.out.println("Giriş yapılamadı.");
+			}
 		}
-		
-		System.out.println("");
 
 	}
 
