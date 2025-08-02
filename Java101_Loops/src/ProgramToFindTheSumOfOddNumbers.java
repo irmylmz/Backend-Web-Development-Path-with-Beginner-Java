@@ -10,7 +10,7 @@ public class ProgramToFindTheSumOfOddNumbers {
 			System.out.println("Enter a number: ");
 			n = sc.nextInt();
 			if(n%2==0) sum+=n;
-		}while(n%2==1);
+		}while(n%2==0);
 		
 		System.out.println(sum);
 
