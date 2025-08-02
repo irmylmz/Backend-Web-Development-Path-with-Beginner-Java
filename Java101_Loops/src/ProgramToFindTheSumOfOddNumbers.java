@@ -9,8 +9,8 @@ public class ProgramToFindTheSumOfOddNumbers {
 		do {
 			System.out.println("Enter a number: ");
 			n = sc.nextInt();
-			if(n%2==1) sum+=n;
-		}while(n > 0);
+			if(n%2==0) sum+=n;
+		}while(n%2==1);
 		
 		System.out.println(sum);
 
